@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.behealth.viewmodel.DialogVm" />
+    </data>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_radius"
+    android:id="@+id/detail_layout">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/dp16"
+        app:cardElevation="@dimen/dp8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp16"
+        android:paddingTop="@dimen/dp8"
+        android:paddingStart="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/my_edit_text"
+                android:hint="Weight (Kilograms)"
+                android:text="@={viewModel.weight}"
+                android:inputType="number">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/my_edit_text"
+                android:hint="Height (Centimeters)"
+                android:text="@={viewModel.height}"
+                android:inputType="number">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/my_edit_text"
+                android:hint="Age"
+                android:text="@={viewModel.age}"
+                android:inputType="number">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp16">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:buttonTint="@color/md_deep_purple_A400"
+            android:layout_marginEnd="@dimen/dp8"
+            android:textColor="@color/md_grey_700"
+            android:checked="@={viewModel.maleChecked}">
+        </androidx.appcompat.widget.AppCompatRadioButton>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:buttonTint="@color/md_deep_purple_A400"
+            android:layout_marginStart="@dimen/dp8"
+            android:textColor="@color/md_grey_700"
+            android:checked="@={viewModel.femaleChecked}">
+        </androidx.appcompat.widget.AppCompatRadioButton>
+
+            </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Daily Activity rate"
+            android:textSize="22sp"
+            android:layout_marginTop="@dimen/dp16"
+            android:textColor="@color/md_grey_700">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Very Low"
+                android:textColor="@color/md_grey_700"
+                android:buttonTint="@color/md_deep_purple_A400"
+                android:checked="@={viewModel.veryLow}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:textColor="@color/md_grey_700"
+                android:buttonTint="@color/md_deep_purple_A400"
+                android:layout_marginTop="@dimen/dp4"
+                android:checked="@={viewModel.low}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:textColor="@color/md_grey_700"
+                android:buttonTint="@color/md_deep_purple_A400"
+                android:layout_marginTop="@dimen/dp4"
+                android:checked="@={viewModel.medium}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:textColor="@color/md_grey_700"
+                android:buttonTint="@color/md_deep_purple_A400"
+                android:layout_marginTop="@dimen/dp4"
+                android:checked="@={viewModel.high}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Very High"
+                android:textColor="@color/md_grey_700"
+                android:buttonTint="@color/md_deep_purple_A400"
+                android:layout_marginTop="@dimen/dp4"
+                android:checked="@={viewModel.veryHigh}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+        </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/my_button"
+            android:layout_marginTop="@dimen/dp24"
+            android:onClick="@{(a)->viewModel.submitClick()}"
+            android:text="Submit"
+            android:elevation="@dimen/dp0">
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+</layout>

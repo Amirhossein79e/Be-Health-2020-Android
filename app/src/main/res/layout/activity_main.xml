@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.behealth.viewmodel.MainVm" />
+    </data>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:background="@color/md_white_1000"
+    android:id="@+id/layout_main">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fitsSystemWindows="true"
+        app:elevation="@dimen/dp0">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            android:elevation="@dimen/dp0"
+            android:fitsSystemWindows="true">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_main"
+        android:gravity="center"
+        app:contentInsetStart="@dimen/dp0"
+        app:contentInsetEnd="@dimen/dp0"
+        android:paddingStart="@dimen/dp24"
+        android:paddingEnd="@dimen/dp24"
+        android:elevation="@dimen/dp0"
+        app:layout_collapseMode="parallax">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="@dimen/dp32"
+                android:layout_height="@dimen/dp32"
+                android:src="@drawable/ic_status"
+                android:background="@color/transparent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/btn_status"
+                android:onClick="@{(a)->viewModel.changeOnClick()}">
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="@dimen/dp32"
+                android:layout_height="@dimen/dp32"
+                android:src="@drawable/ic_settings"
+                android:background="@color/transparent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/btn_settings">
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:fillViewport="true">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout_main">
+    </FrameLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/bottom_navigation_main"
+                app:menu="@menu/bottom_menu_main"
+                style="@style/my_bottom_nav_style"
+                app:elevation="@dimen/dp8"
+        android:layout_gravity="bottom">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:state_pressed="true">
+        <ripple android:color="@color/md_deep_purple_A700">
+            <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dp8"> </corners>
+            <solid android:color="@color/md_deep_purple_A400"> </solid>
+        </shape>
+            </item>
+        </ripple>
+    </item>
+
+
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dp8"> </corners>
+            <solid android:color="@color/md_deep_purple_A400"> </solid>
+        </shape>
+    </item>
+
+</selector>

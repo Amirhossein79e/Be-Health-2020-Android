@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:id="@+id/heart_menu_item" android:title="Status" android:icon="@drawable/ic_bmi"> </item>
+    <item android:id="@+id/step_menu_item" android:title="Steps" android:icon="@drawable/ic_step" > </item>
+    <item android:id="@+id/calories_menu_item" android:title="Calories" android:icon="@drawable/ic_calories" > </item>
+
+</menu>

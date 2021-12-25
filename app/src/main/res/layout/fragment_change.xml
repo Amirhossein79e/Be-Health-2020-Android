@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.amirhosseinemadi.behealth.viewmodel.ChangeVm" />
+    </data>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ChangeFragment"
+    android:background="@color/md_white_1000">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/dp64">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.05"
+            android:orientation="horizontal"
+            android:id="@+id/guideline_top">
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.07"
+            android:orientation="vertical"
+            android:id="@+id/guideline_left">
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.93"
+            android:orientation="vertical"
+            android:id="@+id/guideline_right">
+        </androidx.constraintlayout.widget.Guideline>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guideline_top"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            android:text="Height"
+            android:id="@+id/txt_height"
+            android:textSize="22sp"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            app:layout_constraintStart_toEndOf="@id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/txt_height"
+            app:layout_constraintHeight_percent="0.1"
+            android:id="@+id/edt_height"
+            android:paddingStart="@dimen/dp8"
+            android:paddingEnd="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/my_edit_text"
+            android:hint="@{viewModel.currentHeight}"
+            android:text="@={viewModel.height}"
+            android:gravity="center"
+            android:inputType="number">
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edt_height"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            android:text="Weight"
+            android:id="@+id/txt_weight"
+            android:textSize="22sp"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            app:layout_constraintStart_toEndOf="@id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/txt_weight"
+            app:layout_constraintHeight_percent="0.1"
+            android:id="@+id/edt_weight"
+            android:layout_marginTop="@dimen/dp8"
+            android:paddingStart="@dimen/dp8"
+            android:paddingEnd="@dimen/dp8">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/my_edit_text"
+                android:gravity="center"
+                android:hint="@{viewModel.currentWeight}"
+                android:text="@={viewModel.weight}"
+                android:inputType="number">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edt_weight"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            android:text="Age"
+            android:id="@+id/txt_age"
+            android:textSize="22sp"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            app:layout_constraintStart_toEndOf="@id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/txt_age"
+            app:layout_constraintHeight_percent="0.1"
+            android:id="@+id/edt_age"
+            android:layout_marginTop="@dimen/dp8"
+            android:paddingStart="@dimen/dp8"
+            android:paddingEnd="@dimen/dp8">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/my_edit_text"
+                android:gravity="center"
+                android:hint="@{viewModel.currentAge}"
+                android:text="@={viewModel.age}"
+                android:inputType="number">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edt_age"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            android:text="Daily Activity Rate"
+            android:id="@+id/txt_activity"
+            android:textSize="22sp"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp24">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+        <RadioGroup
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/txt_activity"
+            android:layout_marginTop="@dimen/dp16"
+            android:paddingStart="@dimen/dp4"
+            android:paddingEnd="@dimen/dp8"
+            android:id="@+id/group_radio">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Very Low"
+                android:checked="@={viewModel.veryLow}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:checked="@={viewModel.low}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:checked="@={viewModel.medium}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:checked="@={viewModel.high}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Very High"
+                android:checked="@={viewModel.veryHigh}">
+            </androidx.appcompat.widget.AppCompatRadioButton>
+
+        </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/group_radio"
+            style="@style/my_button"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"
+            android:onClick="@{(a)->viewModel.submitOnCLick()}">
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
+
+</layout>

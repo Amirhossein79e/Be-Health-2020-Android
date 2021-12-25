@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:gravity="center">
+        <rotate android:fromDegrees="270" android:toDegrees="270">
+  <shape
+    android:shape="ring"
+    android:thickness="16dp"
+    android:useLevel="true"
+      android:innerRadius="@dimen/dp80">
+      <gradient android:startColor="@color/md_deep_purple_A100" android:endColor="@color/md_deep_purple_A400" android:type="sweep"> </gradient>
+  </shape>
+        </rotate>
+    </item>
+
+    <item android:gravity="center" android:bottom="176dp">
+        <shape android:shape="ring"
+            android:innerRadius="@dimen/dp0"
+            android:useLevel="false"
+            android:thickness="8dp">
+      <solid android:color="@color/md_deep_purple_A100"> </solid>
+        </shape>
+    </item>
+
+    <item android:gravity="center">
+        <rotate>
+            <inset android:insetBottom="176dp">
+        <shape android:shape="ring"
+            android:innerRadius="@dimen/dp0"
+            android:useLevel="false"
+            android:thickness="8dp">
+
+            <gradient android:type="sweep" android:startColor="@color/md_deep_purple_A200" android:endColor="@color/md_deep_purple_A400"> </gradient>
+
+        </shape>
+            </inset>
+        </rotate>
+    </item>
+
+</layer-list>
+
